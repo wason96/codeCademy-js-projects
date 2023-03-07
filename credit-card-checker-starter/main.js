@@ -24,7 +24,44 @@ const batch = [valid1, valid2, valid3, valid4, valid5, invalid1, invalid2, inval
 
 
 // Add your functions below:
+const validateCred = (arr) => {
+    // returns true when the array contains the digits of a valid credit card
+    // returns false when not
+    // does NOT mutate the original array
+    let double = false; //wether to double the number or not
+    const luhmArray = []; //stores numbers after multiplying
 
+    for(num = arr.length - 1; num >= 0; num--){
+        if(num === arr.length - 1){
+            luhmArray.push(arr[num]);
+            double = true;
+        }else{
+            if (double === true){
+                if (arr[num] * 2 > 9){
+                    luhmArray.push((arr[num] * 2) - 9);
+                } else {
+                    luhmArray.push(arr[num]);
+                }
+                double = false;
+            } else if(double === false){
+                luhmArray.push(arr[num]);
+                double = true;
+            }
+        }
+    }
+
+    //sum function
+    const luhmReduce = (accumulator, current) => accumulator + current;
+
+    //calculate total
+    const luhmSum = luhmArray.reduce(luhmReduce);
+
+    if (luhmSum % 10 === 0){
+        return true;
+    } else {
+        return false;
+    }
+};
 
 
 
