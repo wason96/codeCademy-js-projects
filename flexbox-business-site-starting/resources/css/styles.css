@@ -1,0 +1,175 @@
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-size: 1.6rem;
+}
+
+/* GENERAL Styles */
+.center {
+    margin: 0 auto;
+}
+
+.left {
+    margin-right: auto;
+}
+
+.right {
+    margin-left: auto;
+}
+
+/* NAV Section */
+.desktop-nav {
+    display: flex;
+    height: 11rem;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid rgb(51, 102, 128);
+}
+
+.desktop-nav li {
+    display: inline;
+    list-style: none;
+    margin-left: 4rem;
+}
+
+.desktop-nav ul {
+    margin-right: 2rem;
+}
+
+.desktop-nav ul a {
+    padding: 1.5rem 2rem;
+    background-color: rgb(51, 102, 128);
+    color: #FFFFFF;
+    text-decoration: none;
+    border-radius: 1rem;
+    text-transform: uppercase;
+    font-family: sans-serif;
+}
+
+.desktop-nav ul a:hover {
+    background-color: rgb(68, 137, 171);
+}
+
+.nav-logo img{
+    height: 10rem;
+    margin: 0.5rem 0 0.5rem 2rem;
+}
+
+.mobile-nav {
+    display: none;
+}
+
+/* REVISAR RESPONSIVE ~1000px */
+
+@media only screen and (max-width: 600px) {
+    .desktop-nav {
+        display: none;
+    }
+
+    .mobile-nav {
+        display: flex;
+    }
+}
+
+/* BANNER Section */
+#banner {
+    background-image: url(../images/banner-background-estudio-gpr.png);
+    height: 67.5rem;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+
+#banner a {
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    background-color: rgb(68, 137, 171);
+    font-family: sans-serif;
+    border-radius: 20px;
+}
+
+#banner a:hover {
+    background-color: rgb(51, 102, 128);
+}
+
+#banner .top, #banner .bottom {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+}
+
+#banner .top a {
+    padding: 5rem 10rem;
+    font-size: 6rem;
+    margin-bottom: 5rem;
+}
+
+#banner .bottom a {
+    padding: 2rem 5rem;
+    font-size: 3rem;
+    margin-top: 3rem;
+}
+
+/* Servicios Section */
+
+#servicios {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+#servicios h2 {
+    text-align: center;
+    width: 100%;
+    margin-top: 3rem;
+    margin-bottom: 2rem;
+    font-size: 4rem;
+    font-family: sans-serif;
+}
+
+.servicio {
+    background-color: rgb(51, 102, 128);
+    margin: 2rem;
+    padding: 2rem;
+    padding-bottom: 1.5rem;
+    width: 20%;
+    border-radius: 1rem;
+}
+
+.servicio a {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-items: center;
+    align-items: center;
+    text-align: center;
+    text-decoration: none;
+    color: #efefef;
+    font-family: sans-serif;
+}
+
+.servicio a p {
+    margin-top: 1rem;
+}
+
+.servicio img {
+    width: 90%;
+    border-radius: 1rem;
+}
+
+/* hr was rendering vertically. This fixes that. */
+hr {
+    width: 85%;
+    margin-bottom: 2rem;
+    border-width: 0.3rem;
+    border-color: rgb(68, 67, 67);
+    border-style: solid;
+  }
