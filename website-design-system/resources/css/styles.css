@@ -1,0 +1,235 @@
+html {
+    box-sizing: border-box;
+}
+
+body {
+    /* background-image: url(../images/checkered-blue.webp); */
+    background-image: url(https://raw.githubusercontent.com/wason96/html-css-cheatsheet/main/resources/images/checkered-blue.webp);
+}
+
+nav {
+    width: 100%;
+    position: fixed;
+    z-index: 10;
+    /* background-image: url(../images/checkered-orange.webp); */
+    background-image: url(https://raw.githubusercontent.com/wason96/html-css-cheatsheet/main/resources/images/checkered-orange.webp);
+}
+
+nav ul {
+    text-align: center;
+    margin: 25px auto;
+    padding: 0 60px;
+}
+
+nav li {
+    display: inline-block;
+    background-color: rgb(184, 220, 280);
+    border-radius: 45px;
+    padding: 10px;
+    width: 85px;
+    font-family: 'Courier Prime', monospace;
+    font-size: 16px;
+}
+
+nav a {
+    text-decoration: none;
+    color: rgb(65, 65, 65);
+    padding: 18px 20px;
+}
+
+nav li:hover {
+    background-color: rgb(65, 65, 65);
+}
+
+nav a:hover {
+    color: rgb(184, 220, 280);
+}
+
+h1 {
+    font-family: 'Rock Salt', cursive;
+    font-size: 30px;
+    font-weight: 900;
+    letter-spacing: 0.1rem;
+    line-height: 1.8;
+}
+
+.title {
+    padding-top: 90px;
+    text-align: center;
+}
+
+article {
+    border: 1px solid rgb(65, 65, 65);
+    border-radius: 15px;
+    margin: 10px;
+    padding: 10px;
+}
+
+article h2 {
+    font-family: 'Maven Pro', sans-serif;
+    font-size: 25px;
+    font-weight: 600;
+}
+
+#colors div {
+    text-align: center;
+    font-family: 'Maven Pro', sans-serif;
+    padding: 10px;
+    padding-top: 25px;
+}
+
+.color {
+    display: inline-block;
+    border: 1px solid rgb(65, 65, 65);
+    border-radius: 8px;
+    width: 35%;
+    height: 5rem;
+    margin: 15px;
+    vertical-align: middle;
+}
+
+/* .text {
+    text-align: center;
+} */
+
+.orange {
+    background-color: rgb(223, 179, 97);
+    color: rgb(65, 65, 65);
+}
+
+.blue {
+    background-color: rgb(184, 220, 280);
+    color: rgb(65, 65, 65);
+}
+
+.gray {
+    background-color: rgb(65, 65, 65);
+    color: rgb(184, 220, 280);
+}
+
+.white {
+    background-color: rgb(255, 255, 255);
+    color: rgb(65, 65, 65);
+}
+
+h3 {
+    font-size: 20px;
+    font-family: 'Maven Pro', sans-serif;
+    font-weight: 600;
+    margin: 10px 0;
+}
+
+.font h3{
+    text-decoration: underline;
+}
+
+.maven-pro {
+    font-family: 'Maven Pro', sans-serif;
+}
+
+.rock-salt {
+    font-family: 'Rock Salt', cursive;
+    letter-spacing: 0.1rem;
+    line-height: 1.8;
+}
+
+.courier-prime {
+    font-family: 'Courier Prime', monospace;
+}
+
+.normal {
+    font-weight: 400;
+}
+
+.bold {
+    font-weight: 700;
+}
+
+.italic {
+    font-style: italic;
+}
+
+#text-styles ul {
+    margin: 10px auto 10px 25px;
+
+    list-style: circle;
+    line-height: 1.5;
+    font-family: 'Maven Pro', sans-serif;
+}
+
+.subsection {
+    list-style: disc;
+    font-weight: 600;
+}
+
+.subsection li {
+    font-weight: 400;
+}
+
+.nav-style .subsection {
+    margin-top: 30px;
+    list-style: none;
+}
+
+.nav-style p, .table-style p {
+    margin-top: 30px;
+    font-size: 18px;
+    font-family: 'Maven Pro', sans-serif;
+    font-weight: 600;
+}
+
+.btn {
+    border-radius: 45px;
+    padding: 10px 20px;
+    width: 85px;
+    font-family: 'Courier Prime', monospace;
+    font-size: 16px;
+    background-color: rgb(184, 220, 280);
+    text-decoration: none;
+    color: rgb(65, 65, 65);
+    font-weight: 600;
+}
+
+.btn-hover {
+    border-radius: 45px;
+    padding: 10px 20px;
+    width: 85px;
+    font-family: 'Courier Prime', monospace;
+    font-size: 16px;
+    background-color: rgb(65, 65, 65);
+    text-decoration: none;
+    color: rgb(184, 220, 280);
+}
+
+.table-inline {
+    display: inline-block;
+}
+
+table {
+    margin: 30px 0;
+}
+
+table, th, td {
+    border: 1px solid rgb(65, 65, 65);
+    font-family: 'Maven Pro', sans-serif;
+    padding: 10px;
+    vertical-align: middle;
+}
+
+th {
+    font-weight: 600;
+}
+
+td {
+    vertical-align: middle;
+    text-align: center;
+}
+
+.description {
+    text-align: justify;
+}
+
+.code-style span {
+    font-family: 'Courier Prime', monospace;
+    background-color: rgb(255, 255, 255);
+}
