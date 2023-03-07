@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link href="https://fonts.googleapis.com/css2?family=Courier+Prime&family=Maven+Pro:wght@400;600;700;900&family=Rock+Salt&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="resources/css/reset.css">
+    <link rel="stylesheet" href="resources/css/styles.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My FrontEnd Cheat Sheet</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#html">HTML</a></li>
+                <li><a href="#css">CSS</a></li>
+            </ul>
+        </nav>
+        <h1 class="title">FrontEnd Reference Cheat Sheet</h1>
+    </header>
+    <main>
+        <section id="html">
+            <h2>HTML References</h2>
+            <h3>HTML Tags</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Tag</th>
+                        <th>Name</th>
+                        <th>Description</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><span class="code">&lt;head&gt;</span></td>
+                        <td>Document Metadata (Header)</td>
+                        <td class="description">The <span class="code">&lt;head&gt;</span> element contains machine-readable information (metadata) about the document, like its title, scripts, and style sheets.</td>
+                    </tr>
+                    <tr>
+                        <td><span class="code">&lt;body&gt;</span></td>
+                        <td>Document Body</td>
+                        <td class="description">The <span class="code">&lt;body&gt;</span> element represents the content of an HTML document. There can be only one body element in a document.</td>
+                    </tr>
+                    <tr>
+                        <td><span class="code">&lt;header&gt;</span></td>
+                        <td>Header</td>
+                        <td class="description">The <span class="code">&lt;header&gt;</span> element represents introductory content, typically a group of introductory or navigational aids. It may contain some heading elements but also a logo, a search form, an author name, and other elements.</td>
+                    </tr>
+                    <tr>
+                        <td><span class="code">&lt;main&gt;</span></td>
+                        <td>Main</td>
+                        <td class="description">The <span class="code">&lt;main&gt;</span> element represents the dominant content of the <body> of a document. The main content area consists of content that is directly related to or expands upon the central topic of a document, or the central functionality of an application.</td>
+                    </tr>
+                    <tr>
+                        <td><span class="code">&lt;footer&gt;</span></td>
+                        <td>Footer</td>
+                        <td class="description">A <span class="code">&lt;footer&gt;</span> typically contains information about the author of the section, copyright data or links to related documents.</td>
+                    </tr>
+                    <tr>
+                        <td><span class="code">&lt;h1&gt;</span> - <span class="code">&lt;h6&gt;</span></td>
+                        <td>Section Headings</td>
+                        <td class="description">The <span class="code">&lt;h1&gt;</span> to <span class="code">&lt;h6&gt;</span> elements represent six levels of section headings. <span class="code">&lt;h1&gt;</span> is the highest section level and <span class="code">&lt;h6&gt;</span> is the lowest.</td>
+                    </tr>
+                    <tr>
+                        <td><span class="code">&lt;p&gt;</span></td>
+                        <td>Paragraph</td>
+                        <td class="description">The <span class="code">&lt;p&gt;</span> element represents a paragraph. Paragraphs are usually represented in visual media as blocks of text separated from adjacent blocks by blank lines and/or first-line indentation, but HTML paragraphs can be any structural grouping of related content, such as images or form fields.</td>
+                    </tr>
+                    <tr>
+                        <td><span class="code">&lt;span&gt;</span></td>
+                        <td>Content Span</td>
+                        <td class="description">The <span class="code">&lt;span&gt;</span> element is a generic inline container for phrasing content, which does not inherently represent anything. It can be used to group elements for styling purposes (using the class or id attributes), or because they share attribute values, such as lang. It should be used only when no other semantic element is appropriate. <span class="code">&lt;span&gt;</span> is very much like a <span class="code">&lt;div&gt;</span> element, but <span class="code">&lt;div&gt;</span> is a block-level element whereas a <span class="code">&lt;span&gt;</span> is an inline element.</td>
+                    </tr>
+                    <tr>
+                        <td><span class="code">&lt;em&gt;</span></td>
+                        <td>Emphasis</td>
+                        <td class="description">The <span class="code">&lt;em&gt;</span> element marks text that has stress emphasis. The <span class="code">&lt;em&gt;</span> element can be nested, with each level of nesting indicating a greater degree of emphasis.</td>
+                    </tr>
+                    <tr>
+                        <td><span class="code">&lt;strong&gt;</span></td>
+                        <td>Strong Importance</td>
+                        <td class="description">The <span class="code">&lt;strong&gt;</span> element indicates that its contents have strong importance, seriousness, or urgency. Browsers typically render the contents in bold type.</td>
+                    </tr>
+                    <tr>
+                        <td><span class="code">&lt;ol&gt;</span></td>
+                        <td>Ordered List</td>
+                        <td class="description">The <span class="code">&lt;ol&gt;</span> element represents an ordered list of items — typically rendered as a numbered list.</td>
+                    </tr>
+                    <tr>
+                        <td><span class="code">&lt;ul&gt;</span></td>
+                        <td>Unordered List</td>
+                        <td class="description">The <span class="code">&lt;ul&gt;</span> element represents an unordered list of items, typically rendered as a bulleted list.</td>
+                    </tr>
+                    <tr>
+                        <td><span class="code">&lt;li&gt;</span></td>
+                        <td>List Item</td>
+                        <td class="description">The <span class="code">&lt;li&gt;</span> element is used to represent an item in a list. It must be contained in a parent element: an ordered list (<span class="code">&lt;ol&gt;</span>), an unordered list (<span class="code">&lt;ul&gt;</span>), or a menu (<span class="code">&lt;menu&gt;</span>). In menus and unordered lists, list items are usually displayed using bullet points. In ordered lists, they are usually displayed with an ascending counter on the left, such as a number or letter.</td>
+                    </tr>
+                    <tr>
+                        <td><span class="code">&lt;img&gt;</span></td>
+                        <td>Image Embed</td>
+                        <td class="description">The <span class="code">&lt;img&gt;</span> element embeds an image into the document. It uses the src attribute to link to the image file.</td>
+                    </tr>
+                    <tr>
+                        <td><span class="code">&lt;div&gt;</span></td>
+                        <td>Content Division</td>
+                        <td class="description">The <span class="code">&lt;div&gt;</span> element is the generic container for flow content. It has no effect on the content or layout until styled in some way using CSS.</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+        <section id="css">
+            <h2>CSS References</h2>
+            <p>Under construction</p>
+        </section>
+    </main>
+</body>
+</html>
