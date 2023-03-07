@@ -24,6 +24,10 @@ const batch = [valid1, valid2, valid3, valid4, valid5, invalid1, invalid2, inval
 
 
 // Add your functions below:
+
+    // returns true when the array contains the digits of a valid credit card
+    // returns false when not
+    // does NOT mutate the original array
 const validateCred = (arr) => {
     // returns true when the array contains the digits of a valid credit card
     // returns false when not
@@ -63,6 +67,21 @@ const validateCred = (arr) => {
     }
 };
 
+    // receives an array of card numbers, return an array of invalid numbers
+const findInvalidCards = (arr) => {
+
+    const invalidCards = [];
+    // iterate through the cards array
+    for(card = 0; card < arr.length; card++){
+        if(validateCred(arr[card]) === false){
+            invalidCards.push(arr[card]);
+        }
+    }
+    return invalidCards;
+};
+
+const array = findInvalidCards(batch);
+console.log(array);
 
 
 
