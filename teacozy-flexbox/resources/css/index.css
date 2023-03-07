@@ -1,0 +1,130 @@
+body {
+    font-family: Helvetica;
+    font-size: 22px;
+    color: seashell;
+    background-color: black;
+    opacity: 0.9;
+    margin: 0 auto;
+    box-sizing: border-box;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    display: flex;
+    align-items: center;
+    margin-top: 0px;
+    background-color: black;
+    width: 100%;
+    height: 69px;
+    border-bottom: 1px solid seashell;
+}
+
+.header-left img {
+    height: 50px;
+    margin-left: 10px;
+}
+
+nav {
+    margin-left: auto;
+}
+
+nav ul {
+    margin-right: 10px;
+}
+
+nav li {
+    display: inline;
+}
+
+nav a{
+    color: seashell;
+    margin: 0 10px;
+}
+
+nav a:hover {
+    text-decoration: none;
+}
+
+h2, h4, h5 {
+    text-align: center;
+}
+
+main {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+#hero {
+    margin-top: 69px;
+    height: 700px;
+    width: 1200px;
+    display: flex;
+    align-items: center;
+    /* justify-content: center; */
+    background-image: url(../images/img-mission-background.webp);
+}
+
+.hero-text {
+    /* text-align: center; */
+    background-color: black;
+    width: 100%;
+}
+
+#month {
+    width: 1000px;
+    margin: 35px auto;
+    align-items: center;
+}
+
+.month-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.month-item img {
+    height: 200px;
+    width: 300px;
+    margin: 10px;
+}
+
+.month-item h4 {
+    margin-top: 0;
+}
+
+#location {
+    height: 500px;
+    /* Hadn't specified the width and it was inconsistent. */
+    width: 1200px;
+    display: flex;
+    flex-wrap: wrap;
+    /* I previously had align-items, but that wasn't showing the title and the cards as I wanted them to.
+    I needed to use align-content. */
+    align-content: center;
+    justify-content: center;
+    background-image: url(../images/img-locations-background.jpg);
+}
+
+#location h2 {
+    width: 100%;
+    margin-bottom: 15px;
+}
+
+.location-item {
+    text-align: center;
+    background-color: black;
+    margin: 0 20px;
+    width: 300px;
+}
+
+.contact {
+    height: 200px;
+    width: 100%;
+}
+
+footer h5{
+    text-align: left;
+    margin-left: 20px;
+}
