@@ -40,7 +40,7 @@ const validateCred = (arr) => {
                 if (arr[num] * 2 > 9){
                     luhmArray.push((arr[num] * 2) - 9);
                 } else {
-                    luhmArray.push(arr[num]);
+                    luhmArray.push(arr[num] * 2);
                 }
                 double = false;
             } else if(double === false){
@@ -62,8 +62,6 @@ const validateCred = (arr) => {
         return false;
     }
 };
-
-
 
 
 
