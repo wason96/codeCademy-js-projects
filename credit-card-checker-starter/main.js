@@ -80,9 +80,36 @@ const findInvalidCards = (arr) => {
     return invalidCards;
 };
 
-const array = findInvalidCards(batch);
-console.log(array);
+const idInvalidCardCompanies = (invalidArray) => {
+    const invalidCompanies = [];
 
+    for (i = 0; i < invalidArray.length; i++){
+        if (invalidArray[i][0] === 3){
+            if (invalidCompanies.indexOf('Amex (American Express)') === -1){
+                invalidCompanies.push('Amex (American Express)');
+            } else {continue;}
+        } else if (invalidArray[i][0] === 4){
+            if (invalidCompanies.indexOf('Visa') === -1){
+                invalidCompanies.push('Visa');
+            } else {continue;}
+        } else if (invalidArray[i][0] === 5){
+            if (invalidCompanies.indexOf('Mastercard') === -1){
+                invalidCompanies.push('Mastercard');
+            } else {continue;}
+        } else if (invalidArray[i][0] === 6){
+            if (invalidCompanies.indexOf('Discover') === -1){
+                invalidCompanies.push('Discover');
+            } else {continue;}
+        } else {
+            if (invalidCompanies.indexOf('Company not found') === -1){
+                invalidCompanies.push('Company not found');
+            } else {continue;}
+        }
+    }
 
+    return invalidCompanies;
+}
+console.log(findInvalidCards(batch));
+console.log(idInvalidCardCompanies(findInvalidCards(batch)));
 
 
