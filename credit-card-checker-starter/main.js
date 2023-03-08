@@ -29,9 +29,7 @@ const batch = [valid1, valid2, valid3, valid4, valid5, invalid1, invalid2, inval
     // returns false when not
     // does NOT mutate the original array
 const validateCred = (arr) => {
-    // returns true when the array contains the digits of a valid credit card
-    // returns false when not
-    // does NOT mutate the original array
+
     let double = false; //wether to double the number or not
     const luhmArray = []; //stores numbers after multiplying
 
