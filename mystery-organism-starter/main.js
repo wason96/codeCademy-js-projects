@@ -24,8 +24,11 @@ const pAequorFactory = (specNum, dnaChain) => {
   } else {
     specimenId.push(specNum);
     return {
+      //specimen object properties
       _specimenNum: specNum,
       _dna: dnaChain,
+
+      //specimen mutate method. changes a random base from the dna chain
       mutate () {
         //old dna
         const oldDna = this._dna.slice();
@@ -46,16 +49,31 @@ const pAequorFactory = (specNum, dnaChain) => {
 
         //Returns new chain
         return this._dna;
+      },
+
+      //compares the dna of this object with the dna of the object received as an argument
+      compareDna (pAequor) {
+        let sharedBases = 0;
+        for (let i = 0; i < this._dna.length; i++) {
+          if(this._dna[i] === pAequor._dna[i]) {
+            sharedBases ++;
+          }
+        }
+        const sharedPercent = (sharedBases / 15) * 100;
+        console.log(`Specimen #${this._specimenNum} and Specimen #${pAequor._specimenNum} have ${sharedPercent}% DNA in common.`);
       }
+
     }
   }
 };
 
 
 //Testing area
-const obj = pAequorFactory(1, mockUpStrand());
+const obj1 = pAequorFactory(1, mockUpStrand());
+const obj2 = pAequorFactory(2, mockUpStrand());
 
-obj.mutate();
+
+obj1.compareDna(obj2);
 
 
 
