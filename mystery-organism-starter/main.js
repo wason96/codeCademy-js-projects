@@ -61,6 +61,21 @@ const pAequorFactory = (specNum, dnaChain) => {
         }
         const sharedPercent = (sharedBases / 15) * 100;
         console.log(`Specimen #${this._specimenNum} and Specimen #${pAequor._specimenNum} have ${sharedPercent}% DNA in common.`);
+      },
+
+      //Checks if the dna chain has at least 60% C or G bases. If true, the specimen is more likely to survive. Returns true or false
+      willLikelySurvive () {
+        let numOfCorG = 0;
+        for (let i = 0; i < this._dna.length; i++) {
+          if(this._dna[i] === 'C' || this._dna[i] === 'G'){
+            numOfCorG ++;
+          }         
+        }
+        if ((numOfCorG/this._dna.length) * 100 >= 60){
+          return true;
+        } else {
+          return false;
+        }
       }
 
     }
@@ -73,8 +88,8 @@ const obj1 = pAequorFactory(1, mockUpStrand());
 const obj2 = pAequorFactory(2, mockUpStrand());
 
 
-obj1.compareDna(obj2);
-
+obj1.willLikelySurvive();
+obj2.willLikelySurvive();
 
 
 
