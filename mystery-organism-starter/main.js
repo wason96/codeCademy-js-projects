@@ -1,3 +1,6 @@
+ //stores used IDs
+const specimenId = [];
+
 // Returns a random DNA base
 const returnRandBase = () => {
   const dnaBases = ['A', 'T', 'C', 'G'];
@@ -15,7 +18,6 @@ const mockUpStrand = () => {
 
 //create a factory function pAequorFactory() that receives two parameters.
 // The first parameter is a number (no two organisms should have the same number).
-const specimenId = []; //stores used IDs
 // The second parameter is an array of 15 DNA bases.
 // pAequorFactory() should return an object that contains the properties specimenNum and dna that correspond to the parameters provided.
 const pAequorFactory = (specNum, dnaChain) => {
@@ -83,13 +85,34 @@ const pAequorFactory = (specNum, dnaChain) => {
 };
 
 
+//Create 30 instances of pAequor that can survive and store them in an array
+let specArray = [];
+let id;
+if(specArray.length === 0){
+  id = 1;
+} else{
+  id = specArray[specArray.length - 1];
+}
+
+while (specArray.length < 30){
+  
+    const spec = pAequorFactory(id, mockUpStrand());
+    if (spec.willLikelySurvive()){
+      specArray.push(spec);
+      specimenId.push(spec._specimenNum);
+      id ++;
+    } else {
+      id ++;
+      continue;
+    }
+
+}
+
+
 //Testing area
-const obj1 = pAequorFactory(1, mockUpStrand());
-const obj2 = pAequorFactory(2, mockUpStrand());
-
-
-obj1.willLikelySurvive();
-obj2.willLikelySurvive();
+for(i = 0; i < specArray.length; i ++){
+  console.log(`Specimen ${specArray[i]._specimenNum}: ${specArray[i].willLikelySurvive()}`);
+}
 
 
 
